@@ -1,0 +1,18 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: GATEWAY-APP
+eureka:
+  client:
+    service-url:
+      defaultZone: ${DISCOVERY_URL:http://localhost:9090}/eureka/
+zuul:
+  prefix: /ms
+  routes:
+    price:
+      path: /api1/**
+      service-id: STOCK-PRICE-API
+    calc :
+      path: /api2/**
+      service-id: STOCK-CALC-API  
