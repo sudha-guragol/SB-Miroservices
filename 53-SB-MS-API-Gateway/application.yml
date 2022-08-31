@@ -1,0 +1,7 @@
+server:
+  port: 9090
+
+#avoid self registering itself with eureka
+eureka:
+  client:
+    register-with-eureka: false
