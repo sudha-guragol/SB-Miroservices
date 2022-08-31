@@ -1,0 +1,8 @@
+server:
+  port: 9090
+  
+  #used to avoid same application should not registered with eureka server(by default 50th app registerrting as a client)
+eureka:
+  client:
+    register-with-eureka: false
+  
