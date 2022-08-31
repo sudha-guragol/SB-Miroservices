@@ -1,0 +1,20 @@
+server:
+  port: 1111
+  
+  #client application name
+  
+spring:
+  application:
+    name: CLIENT-ONE
+  # to register client with admin server (with admin server url)(used to monitor the application using actuators 
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090/
+ #for api's exposing all the actuator endpoints       
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+                
