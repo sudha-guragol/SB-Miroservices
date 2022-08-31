@@ -1,0 +1,13 @@
+server:
+  port: 2222
+    
+spring:
+  application:
+    name: GREET-API  
+    
+    
+    #define port no manually wen v are using port no other than 8761
+eureka:
+  client:
+    service-url:
+      defaultZone : ${DISCOVERY-URL:http://localhost:9090}/eureka/    
